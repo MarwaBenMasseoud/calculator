@@ -1,0 +1,39 @@
+.button {
+  background-color: cadetblue;
+  color: white;
+  width: 150px;
+  height: 37px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid cadetblue;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  height: 36px;
+  width: 630px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: end;
+}
+
+.input {
+  height: 32px;
+  border: 2px solid cadetblue;
+  border-radius: 4px;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.inline {
+  display: inline
+}

@@ -1,0 +1,16 @@
+<form [formGroup]="reactiveForm" (ngSubmit)="sendDesiredAmount()">
+  <div class="header-container">Montant désiré:</div>
+  <div class="input-container">
+
+    <button type="button" class="button" *ngIf="showButtonFloor" (click)="sendFloorAmount()">Montant précédent</button>
+
+    <input class="input" id="amount" name="amount" formControlName="amount">
+
+    <button type="button" class="button" *ngIf="showButtonCeil" (click)="sendCeilAmount()">Montant suivant</button>
+  </div>
+
+  <div class="submit-container">
+    <button type="submit" class="button">Valider</button>
+  </div>
+</form>
+

@@ -1,14 +1,18 @@
 <div class="container">
   <div class="shadow-card">
+    <app-desired-amount [shopId]="shopId"
+                        (sendCards)="displayCards($event)"
+                        (sendCardsNotEqual)="displayCardsNotEqual($event)"
+                        (emptyCards)="emptyCards($event)"></app-desired-amount>
 
     <div class="response">
-      <div>
+      <div *ngIf="cards && !showMessage">
         <p>Votre montant est composé des cartes suivantes :</p>
         <div class="card-container">
           <div *ngFor="let card of cards" class="card">{{card}} €</div>
         </div>
       </div>
-      <p>Ce choix n'est pas possible, Veuillez choisir le montant suivant ou précédent</p>
+      <p *ngIf="showMessage">Ce choix n'est pas possible, veuillez choisir le montant suivant ou précédent.</p>
     </div>
   </div>
 </div>

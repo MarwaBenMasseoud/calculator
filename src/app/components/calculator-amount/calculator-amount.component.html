@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="shadow-card">
+
+    <div class="response">
+      <div>
+        <p>Votre montant est composé des cartes suivantes :</p>
+        <div class="card-container">
+          <div *ngFor="let card of cards" class="card">{{card}} €</div>
+        </div>
+      </div>
+      <p>Ce choix n'est pas possible, Veuillez choisir le montant suivant ou précédent</p>
+    </div>
+  </div>
+</div>
+
